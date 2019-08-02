@@ -2,6 +2,21 @@
 const beepAudio = new Audio('http://soundbible.com/mp3/Robot_blip-Marianne_Gagnon-120342607.mp3');
 const shootAudio = new Audio('http://soundbible.com/mp3/shooting_star-Mike_Koenig-1132888100.mp3');
 
+const rpsLookUp = {
+    r: {
+        beats: "s",
+        imgUrl: "css/imgs/rock.png"
+    },
+    p: {
+        beats: "r",
+        imgUrl: "css/imgs/paper.png"
+    },
+    s: {
+        beats: "p",
+        imgUrl: "css/imgs/scissors.png"
+    }
+}
+
 /*----- app's state (variables) -----*/
 let scores, results, winner;
 
@@ -45,6 +60,12 @@ const init = () => {
 const render = () => {
     for (let score in scores) {
         scoreEls[score].textContent = scores[score]
+    }
+    for (let result in results) {
+        resultEls[result].borderEl.style.borderColor = 
+        winner === result  ? "grey" : "white";
+        resultEls[result].imgEl.src = 
+
     }
 }
 init();
