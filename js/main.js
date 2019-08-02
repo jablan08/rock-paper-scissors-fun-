@@ -12,6 +12,16 @@ const scoreEls = {
     c: document.getElementById("c-score")
 };
 
+const resultEls = {
+    p: {
+        borderEl: document.getElementById("p-result"),
+        imgEl: document.querySelector("#p-result img")
+    },
+    c: {
+        borderEl: document.getElementById("c-result"),
+        imgEl: document.querySelector("#c-result img")
+    },
+}
 
 /*----- functions -----*/
 const playRound = () => {
@@ -34,7 +44,7 @@ const init = () => {
 
 const render = () => {
     for (let score in scores) {
-        scoreEls[score]
+        scoreEls[score].textContent = scores[score]
     }
 }
 init();
