@@ -39,8 +39,23 @@ const resultEls = {
 }
 
 /*----- functions -----*/
+const getRandomRPS = () =>{
+    let rps = Object.keys(rpsLookUp);
+    let rndIdx = Math.floor(Math.random() * rps.length)
+    return rps[rndIdx];
+}
 const playRound = () => {
-    
+    results.p = getRandomRPS();
+    results.c = getRandomRPS();
+    if (results.p === results.c) {
+        winner = "t";
+    } else if (results.c === rpsLookUp[results.p].beats) {
+        winner = "p";
+    } else {
+        winner = "c";
+    }
+    scores[winner] += 1
+    render();
 }
 
 const init = () => {
@@ -64,8 +79,7 @@ const render = () => {
     for (let result in results) {
         resultEls[result].borderEl.style.borderColor = 
         winner === result  ? "grey" : "white";
-        resultEls[result].imgEl.src = 
-
+        resultEls[result].imgEl.src = rpsLookUp[results[result]].imgUrl;
     }
 }
 init();

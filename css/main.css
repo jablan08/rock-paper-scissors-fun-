@@ -32,4 +32,9 @@ html, * {
     border: 3vmin solid grey;
     border-radius: 5vmin;
   }
+  #p-result img, #c-result img {
+    width: 100%
+  }
+
+
   
