@@ -1,40 +1,44 @@
-html, * {
+html,
+* {
     font-family: helvetica;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  main {
+main {
     display: grid;
     grid-template-columns: 30vmin 15vmin 30vmin;
     grid-template-rows: 10vmin 10vmin 30vmin 10vmin;
-  }
-  
-  main * {
+}
+
+main * {
     display: flex;
     justify-content: center;
-    align-items: center
-  }
+    align-items: center;
+}
 
-  main button {
+main button {
     grid-column: span 3;
     margin: 2vmin;
-  }
+}
 
-  #p-result, #c-result {
+#p-result,
+#c-result {
     border: 3vmin solid grey;
     border-radius: 5vmin;
-  }
-  #p-result img, #c-result img {
-    width: 100%
-  }
+}
+#p-result img,
+#c-result img {
+    width: 100%;
+}
 
-
-  
+.player {
+    color: red;
+}
