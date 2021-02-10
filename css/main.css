@@ -40,5 +40,10 @@ main button {
 }
 
 .player {
-    color: red;
+    color: #8856c0;
+}
+
+.cards {
+    font-size: 24px;
+    font-weight: 700;
 }
